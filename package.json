@@ -1,0 +1,18 @@
+{
+  "name": "google-calendar-addon",
+  "version": "0.1.0",
+  "description": "Videoroom addon for Google Calendar",
+  "keywords": [
+    "google",
+    "google-addon",
+    "google-calendar"
+  ],
+  "author": "ostatni5",
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "@google/clasp": "^2.4.2"
+  },
+  "scripts": {
+    "lint": "eslint ./src"
+  }
+}

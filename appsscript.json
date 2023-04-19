@@ -1,0 +1,51 @@
+{
+  "timeZone": "Europe/Warsaw",
+  "exceptionLogging": "STACKDRIVER",
+  "dependencies": {
+    "enabledAdvancedServices": [
+      {
+        "userSymbol": "Calendar",
+        "serviceId": "calendar",
+        "version": "v3"
+      }
+    ]
+  },
+  "webapp": {
+    "executeAs": "USER_ACCESSING",
+    "access": "ANYONE"
+  },
+  "oauthScopes": [
+    "https://www.googleapis.com/auth/calendar.addons.execute",
+    "https://www.googleapis.com/auth/calendar.events.readonly",
+    "https://www.googleapis.com/auth/calendar.addons.current.event.write",
+    "https://www.googleapis.com/auth/script.external_request",
+    "https://www.googleapis.com/auth/script.scriptapp",
+    "https://www.googleapis.com/auth/script.locale",
+    "https://www.googleapis.com/auth/calendar.addons.current.event.read",
+    "https://www.googleapis.com/auth/calendar.events"
+  ],
+  "addOns": {
+    "calendar": {
+      "conferenceSolution": [
+        {
+          "id": 1,
+          "name": "Videoroom",
+          "logoUrl": "https://pbs.twimg.com/profile_images/1539895108627304449/weoZQ8nm.pngss",
+          "onCreateFunction": "createConference"
+        }
+      ],
+      "currentEventAccess": "READ_WRITE",
+      "eventOpenTrigger": {
+        "runFunction": "onEventOpen"
+      }
+    },
+    "common": {
+      "homepageTrigger": {
+        "enabled": false
+      },
+      "logoUrl": "https://pbs.twimg.com/profile_images/1539895108627304449/weoZQ8nm.png",
+      "name": "Videoroom"
+    }
+  },
+  "runtimeVersion": "V8"
+}
